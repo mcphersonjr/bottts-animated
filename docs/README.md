@@ -9,6 +9,7 @@ Reference for **Bottts-Neutral Animated** 6.2.1. Start with the [project README]
 | [Motion](./motion.md) | What each eye does, talk timing, texture drift, reduced motion |
 | [Architecture](./architecture.md) | File map, layer order, and how CSS stays inside the SVG |
 | [Demo](./demo.md) | Opening the gallery and regenerating it |
+| [CDN](./cdn.md) | jsDelivr and unpkg URLs, and what has to be public for them to resolve |
 | [Integrating](./integrating.md) | `<img>`, inline SVG, and mobile WebView or native SVG |
 | [Changelog](./changelog.md) | 6.2 and 6.2.1 behavior |
 

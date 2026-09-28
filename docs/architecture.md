@@ -29,7 +29,10 @@ Static output skips step 5 and skips the enhancer, the extra `.bn-eye-art` group
 | `src/parts/parts.json` | Same fragments as JSON, for tooling that does not import the module |
 | `src/layer-map.json` | Machine-readable catalog: canvas, transforms, option names, speed scale, motion classes |
 | `src/avatars/*.svg` | Checked-in samples from `npm run samples`. Safe to use as static assets |
+| `dist/bottts-animated.js` | ESM bundle. One file, same named exports as the factory. This is `main` / `module`. |
+| `dist/bottts-animated.min.js` | Minified IIFE. Global `BotttsAnimated`. This is the `jsdelivr`, `unpkg`, and `browser` entry. |
 | `demo/index.html` | Generated gallery. Rebuild with `npm run demo` |
+| `scripts/build-cdn.mjs` | Writes `dist/` for jsDelivr. Run with `npm run build` |
 | `scripts/build-self-contained.mjs` | Bundles the factory with esbuild into that HTML file |
 | `scripts/generate-samples.mjs` | Writes `src/avatars/` |
 

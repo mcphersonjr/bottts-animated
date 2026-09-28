@@ -30,6 +30,32 @@ img.src = createAvatarDataUrl({ seed: 'cedric', animationVariant: 'medium' });
 
 `animationVariant` defaults to `none` (a still image). Any other speed embeds the motion CSS.
 
+## jsDelivr
+
+The browser build is the file jsDelivr and unpkg serve by default. After this package is public on npm, or the repo is public on GitHub with a semver tag `v6.2.1`, these URLs resolve.
+
+Script tag. `BotttsAnimated.createAvatar` and `BotttsAnimated.createAvatarDataUrl` are globals:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@mcpherson-media/bottts-animated@6.2.1"></script>
+<script>
+  const svg = BotttsAnimated.createAvatar({
+    seed: 'cedric',
+    animationVariant: 'medium',
+  });
+</script>
+```
+
+ES module:
+
+```html
+<script type="module">
+  import { createAvatar } from 'https://cdn.jsdelivr.net/npm/@mcpherson-media/bottts-animated@6.2.1/dist/bottts-animated.js';
+</script>
+```
+
+Pin `@6.2.1`. On GitHub the path is required: `cdn.jsdelivr.net/gh/OWNER/REPO@6.2.1/dist/bottts-animated.min.js`, after a `v6.2.1` tag. Rebuild with `npm run build` and commit `dist/` when the factory changes. Details: [docs/cdn.md](./docs/cdn.md).
+
 ## What you can set
 
 | Option | Role |
@@ -58,12 +84,14 @@ The README is the entry point. The `docs/` directory is the reference.
 | [docs/motion.md](./docs/motion.md) | Per-eye motion, talk, texture drift, reduced motion |
 | [docs/architecture.md](./docs/architecture.md) | How an SVG is assembled and where each file lives |
 | [docs/demo.md](./docs/demo.md) | The browser demo and the sample-generation scripts |
+| [docs/cdn.md](./docs/cdn.md) | jsDelivr and unpkg URLs, script tag, and publish checklist |
 | [docs/integrating.md](./docs/integrating.md) | Web, data-URL, and React Native integration |
 | [docs/changelog.md](./docs/changelog.md) | What changed in 6.2 and 6.2.1 |
 
 ## Project layout
 
 ```text
+dist/bottts-animated.js  Browser bundles served by jsDelivr
 src/createAvatar.js       SVG factory
 src/eyes/enhanceEyeSvg.js Motion wraps around official eye paths
 src/parts/                 Official Bottts-Neutral path fragments

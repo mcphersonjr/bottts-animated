@@ -3,19 +3,30 @@
   "version": "6.2.1",
   "description": "Animated Bottts-Neutral avatars. CSS keyframes live inside the SVG so motion plays in a plain img tag.",
   "type": "module",
-  "main": "src/createAvatar.js",
+  "main": "./dist/bottts-animated.js",
+  "module": "./dist/bottts-animated.js",
+  "browser": "./dist/bottts-animated.min.js",
+  "jsdelivr": "./dist/bottts-animated.min.js",
+  "unpkg": "./dist/bottts-animated.min.js",
   "exports": {
-    ".": "./src/createAvatar.js",
-    "./createAvatar": "./src/createAvatar.js"
+    ".": {
+      "import": "./dist/bottts-animated.js",
+      "default": "./dist/bottts-animated.js"
+    },
+    "./createAvatar": "./src/createAvatar.js",
+    "./min": "./dist/bottts-animated.min.js"
   },
   "files": [
+    "dist",
     "src",
     "demo",
     "docs",
-    "scripts",
     "README.md",
     "ATTRIBUTION.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "SEE LICENSE IN ATTRIBUTION.md",
   "author": "McPherson Media, LLC",
   "keywords": [
@@ -26,6 +37,8 @@
     "animated"
   ],
   "scripts": {
+    "build": "node scripts/build-cdn.mjs",
+    "prepublishOnly": "npm run build",
     "demo": "node scripts/build-self-contained.mjs",
     "samples": "node scripts/generate-samples.mjs"
   },

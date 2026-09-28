@@ -40,6 +40,8 @@ npm run demo
 
 Commit the rebuilt HTML when you change motion or the factory so the gallery matches the source.
 
+Also run `npm run build` and commit `dist/`. That folder is the file jsDelivr serves. See [cdn.md](./cdn.md).
+
 ## Regenerate sample SVGs
 
 ```bash

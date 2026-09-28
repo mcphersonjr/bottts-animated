@@ -13,7 +13,7 @@ Official Bottts-Neutral names, as shipped in `src/parts/` and `OPTION_NAMES`. Mo
 | `frame1` | Wide frame, cyan LEDs (`#8bddff`) | LEDs pulse. The white highlight breathes |
 | `frame2` | Narrower frame, green LEDs (`#5ef2b8`) | Same pulse and highlight breathe as `frame1` |
 | `glow` | Concentric white rings | Rings pulse opacity, staggered from outside in |
-| `happy` | Stroke arcs | Soft squint via `scaleY` |
+| `happy` | Stroke arcs at opacity `.8` | Soft squint via `scaleY` |
 | `hearts` | Heart shapes | Gentle scale and float |
 | `robocop` | Visor with white slash highlights | The existing slashes slide inside the visor mask |
 | `roundFrame01` | Pill frame and light HUD LEDs (`#f4f4f4`) | LEDs pulse. The glass breathes |

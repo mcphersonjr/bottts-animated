@@ -1,6 +1,6 @@
 # Integrating
 
-Use `createAvatar` wherever you can run the module. Use a data URL or a file from `src/avatars/` when you only need to display the result.
+Use `createAvatar` wherever you can run the module. Use a data URL or a file from `src/avatars/` when you only need to display the result. For a page that should not install the package, use the [CDN build](./cdn.md).
 
 ## Web
 
