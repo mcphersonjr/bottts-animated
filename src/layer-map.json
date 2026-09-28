@@ -1,0 +1,123 @@
+{
+  "$comment": "Bottts-Neutral Animated v6.2.1 layer contract. Art: remix of Bottts by Pablo Stanley (https://bottts.com/). Style: https://www.dicebear.com/styles/bottts-neutral/. Runtime source of truth is src/createAvatar.js.",
+  "style": "bottts-neutral",
+  "version": "6.2.1",
+  "canvas": {
+    "width": 120,
+    "height": 120,
+    "viewBox": "0 0 120 120"
+  },
+  "transforms": {
+    "eyes": "translate(8 20)",
+    "mouth": "translate(26 72)",
+    "texture": "translate(-48.5 -9.9)",
+    "faceScale": "translate(60 60) scale(S) translate(-60 -60)",
+    "faceScaleOrigin": [60, 60],
+    "note": "Face scale wraps texture, mouth, and eyes only, and only when scale is not 1. Background stays a full square."
+  },
+  "layers": {
+    "bg": {
+      "id": "#bg",
+      "animatable": false
+    },
+    "texture": {
+      "id": "#texture",
+      "cssClass": ".bn-texture",
+      "gate": ".bn-tex-anim",
+      "motions": ["texDrift"]
+    },
+    "mouth": {
+      "id": "#mouth",
+      "cssClass": ".bn-mouth",
+      "gate": ".bn-talk-anim",
+      "motions": ["talk"]
+    },
+    "eyes": {
+      "id": "#eyes",
+      "svgTransformOnly": true,
+      "note": "Official translate stays on #eyes. Motion classes sit on inner groups from enhanceEyeSvg, and only while animating."
+    }
+  },
+  "optionVariants": {
+    "eyes": [
+      "bulging",
+      "dizzy",
+      "eva",
+      "frame1",
+      "frame2",
+      "glow",
+      "happy",
+      "hearts",
+      "robocop",
+      "round",
+      "roundFrame01",
+      "roundFrame02",
+      "sensor",
+      "shade01"
+    ],
+    "mouth": [
+      "bite",
+      "diagram",
+      "grill01",
+      "grill02",
+      "grill03",
+      "smile01",
+      "smile02",
+      "square01",
+      "square02"
+    ],
+    "texture": [
+      "camo01",
+      "camo02",
+      "circuits",
+      "dirty01",
+      "dirty02",
+      "dots",
+      "grunge01",
+      "grunge02"
+    ],
+    "animationVariant": [
+      "none",
+      "slowest",
+      "slower",
+      "slow",
+      "medium",
+      "fast",
+      "fastest"
+    ],
+    "backgroundColor": [
+      "1499da",
+      "159fbf",
+      "15a2a9",
+      "15a594",
+      "15a876",
+      "40a843",
+      "448ef4",
+      "7681f5",
+      "7a9f12",
+      "879198",
+      "8f8f8f",
+      "978d87",
+      "9975ea",
+      "9b9312",
+      "b18911",
+      "b46bd6",
+      "c67c11",
+      "ca62bb",
+      "d95c9a",
+      "de6811",
+      "e25a75",
+      "e45e4d"
+    ]
+  },
+  "animationVariantScales": {
+    "slowest": 1.35,
+    "slower": 1.25,
+    "slow": 1.15,
+    "medium": 1.0,
+    "fast": 0.9,
+    "fastest": 0.75
+  },
+  "scale": { "min": 0, "max": 10, "default": 1, "closeUp": 1.25 },
+  "size": { "min": 1, "max": 4096 }
+}

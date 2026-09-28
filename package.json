@@ -1,0 +1,35 @@
+{
+  "name": "@mcpherson-media/bottts-animated",
+  "version": "6.2.1",
+  "description": "Animated Bottts-Neutral avatars. CSS keyframes live inside the SVG so motion plays in a plain img tag.",
+  "type": "module",
+  "main": "src/createAvatar.js",
+  "exports": {
+    ".": "./src/createAvatar.js",
+    "./createAvatar": "./src/createAvatar.js"
+  },
+  "files": [
+    "src",
+    "demo",
+    "docs",
+    "scripts",
+    "README.md",
+    "ATTRIBUTION.md"
+  ],
+  "license": "SEE LICENSE IN ATTRIBUTION.md",
+  "author": "McPherson Media, LLC",
+  "keywords": [
+    "bottts",
+    "dicebear",
+    "avatar",
+    "svg",
+    "animated"
+  ],
+  "scripts": {
+    "demo": "node scripts/build-self-contained.mjs",
+    "samples": "node scripts/generate-samples.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.10"
+  }
+}
