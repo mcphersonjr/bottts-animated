@@ -30,11 +30,19 @@ img.src = createAvatarDataUrl({ seed: 'cedric', animationVariant: 'medium' });
 
 `animationVariant` defaults to `none` (a still image). Any other speed embeds the motion CSS.
 
-## jsDelivr
+## npm and jsDelivr
 
-The browser build is the file jsDelivr and unpkg serve by default. After this package is public on npm, or the repo is public on GitHub with a semver tag `v6.2.1`, these URLs resolve.
+Install the package:
 
-Script tag. `BotttsAnimated.createAvatar` and `BotttsAnimated.createAvatarDataUrl` are globals:
+```bash
+npm install @mcpherson-media/bottts-animated
+```
+
+```js
+import { createAvatar, createAvatarDataUrl } from '@mcpherson-media/bottts-animated';
+```
+
+Or load 6.2.1 from jsDelivr with no install. This address is the minified browser build. `BotttsAnimated.createAvatar` and `BotttsAnimated.createAvatarDataUrl` are globals:
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/@mcpherson-media/bottts-animated@6.2.1"></script>
@@ -46,7 +54,7 @@ Script tag. `BotttsAnimated.createAvatar` and `BotttsAnimated.createAvatarDataUr
 </script>
 ```
 
-ES module:
+ES module from the same package:
 
 ```html
 <script type="module">
@@ -54,7 +62,13 @@ ES module:
 </script>
 ```
 
-Pin `@6.2.1`. On GitHub the path is required: `cdn.jsdelivr.net/gh/OWNER/REPO@6.2.1/dist/bottts-animated.min.js`, after a `v6.2.1` tag. Rebuild with `npm run build` and commit `dist/` when the factory changes. Details: [docs/cdn.md](./docs/cdn.md).
+The GitHub copy is the same file. That URL needs the full path:
+
+```text
+https://cdn.jsdelivr.net/gh/mcphersonjr/bottts-animated@6.2.1/dist/bottts-animated.min.js
+```
+
+Pin `@6.2.1`. unpkg uses `https://unpkg.com/@mcpherson-media/bottts-animated@6.2.1`. Details: [docs/cdn.md](./docs/cdn.md).
 
 ## What you can set
 
@@ -84,7 +98,7 @@ The README is the entry point. The `docs/` directory is the reference.
 | [docs/motion.md](./docs/motion.md) | Per-eye motion, talk, texture drift, reduced motion |
 | [docs/architecture.md](./docs/architecture.md) | How an SVG is assembled and where each file lives |
 | [docs/demo.md](./docs/demo.md) | The browser demo and the sample-generation scripts |
-| [docs/cdn.md](./docs/cdn.md) | jsDelivr and unpkg URLs, script tag, and publish checklist |
+| [docs/cdn.md](./docs/cdn.md) | npm install, and the jsDelivr and unpkg URLs |
 | [docs/integrating.md](./docs/integrating.md) | Web, data-URL, and React Native integration |
 | [docs/changelog.md](./docs/changelog.md) | What changed in 6.2 and 6.2.1 |
 

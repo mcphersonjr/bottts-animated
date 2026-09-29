@@ -1,6 +1,14 @@
 # Integrating
 
-Use `createAvatar` wherever you can run the module. Use a data URL or a file from `src/avatars/` when you only need to display the result. For a page that should not install the package, use the [CDN build](./cdn.md).
+Use `createAvatar` wherever you can run the module. Use a data URL or a file from `src/avatars/` when you only need to display the result.
+
+Install it with `npm install @mcpherson-media/bottts-animated` and import from `@mcpherson-media/bottts-animated`. For a page that should not install the package, load the [CDN build](./cdn.md):
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@mcpherson-media/bottts-animated@6.2.1"></script>
+```
+
+The GitHub file is the same build, with the path included: `https://cdn.jsdelivr.net/gh/mcphersonjr/bottts-animated@6.2.1/dist/bottts-animated.min.js`.
 
 ## Web
 
